@@ -1,4 +1,7 @@
-﻿using System;
+﻿using GeraEstoque.Repositories;
+using GeraEstoque.Models;
+using GeraEstoque.Screens;  
+
 
 namespace GeraEstoque // Note: actual namespace depends on the project name.
 {
@@ -6,14 +9,9 @@ namespace GeraEstoque // Note: actual namespace depends on the project name.
     {
         static void Main(string[] args)
         {
-           Menu.Show();
+          ProdutoRepository repository = new ProdutoRepository();
+
+          MenuScreen.Iniciar(repository);
         }
-
-        
-
-
-
     }
-
-
 }
