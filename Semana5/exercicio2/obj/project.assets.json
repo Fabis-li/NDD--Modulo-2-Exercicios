@@ -8,24 +8,26 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Fabiano\\.nuget\\packages\\": {}
+    "C:\\Users\\fabia\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Fabiano\\Documents\\DevHouse\\Modulo-2\\exercicio2\\exercicio2.csproj",
+      "projectUniqueName": "C:\\Users\\fabia\\OneDrive\\Documentos\\DevSenai\\Modulo-2\\Exercicios\\Semana5\\exercicio2\\exercicio2.csproj",
       "projectName": "exercicio2",
-      "projectPath": "C:\\Users\\Fabiano\\Documents\\DevHouse\\Modulo-2\\exercicio2\\exercicio2.csproj",
-      "packagesPath": "C:\\Users\\Fabiano\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Fabiano\\Documents\\DevHouse\\Modulo-2\\exercicio2\\obj\\",
+      "projectPath": "C:\\Users\\fabia\\OneDrive\\Documentos\\DevSenai\\Modulo-2\\Exercicios\\Semana5\\exercicio2\\exercicio2.csproj",
+      "packagesPath": "C:\\Users\\fabia\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\fabia\\OneDrive\\Documentos\\DevSenai\\Modulo-2\\Exercicios\\Semana5\\exercicio2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Fabiano\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\fabia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

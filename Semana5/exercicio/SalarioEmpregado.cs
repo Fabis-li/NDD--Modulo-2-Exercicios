@@ -4,6 +4,7 @@ namespace exercicio
     {  
         public int codigoFuncionario { get; set; }
         public double valorSalario { get; set; }
+
         public SalarioEmpregado()
         {            
         }
@@ -14,9 +15,9 @@ namespace exercicio
             this.valorSalario = valorSalario;
         }
 
-        public void CalcularFolhaDePagamento()
+        public double CalcularFolhaDePagamento(double valorSalario )
         {
-            System.Console.WriteLine("Calculando Folha de Pagamento");
+            return valorSalario;
         }
     }
 }

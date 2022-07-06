@@ -16,9 +16,9 @@ namespace exercicio2
             this.saldo = saldo;
             this.valorTaxa = valorTaxa;
         } 
-        public virtual void VerificarValorTaxaCartao(double valorDaTaxa)
+        public virtual double VerificarValorTaxaCartao(double valorDaTaxa)
         {
-           Console.WriteLine("O valor da taxa e saldo disponibilizado é " + valorDaTaxa * 0.02);
+           return saldo * 0.02;
         }
     }
 }

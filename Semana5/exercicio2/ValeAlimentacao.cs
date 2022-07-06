@@ -5,9 +5,13 @@ namespace exercicio2
         public ValeAlimentacao()
         {            
         }
-        public override void VerificarValorTaxaCartao(double valorDaTaxa)
+
+        public ValeAlimentacao(string bandeira, double saldo, double valorTaxa) : base(bandeira, saldo, valorTaxa)
+        {            
+        }
+        public override double VerificarValorTaxaCartao(double valorDaTaxa)
         {
-           Console.WriteLine("O valor da taxa e saldo disponibilizado é " + valorDaTaxa * 0.10);
+           return saldo * 0.05;
 
         }
     }   

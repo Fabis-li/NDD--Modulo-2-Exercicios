@@ -1,6 +1,6 @@
 namespace exercicio
 {
-    public class Secretaria : Empregado
+    public class Secretaria : SalarioEmpregado
     {
         public int qtdeAnosEmpresa { get; set; }
 
@@ -8,7 +8,9 @@ namespace exercicio
         {            
         }
 
-        public Secretaria(int id, string nome, int qtdeAnosEmpresa) : base (id, nome)
+        public Secretaria(int id, string nome, int codigoFuncionario, double valorSalario, int qtdeAnosEmpresa)
+            : base(id, nome, codigoFuncionario, valorSalario)
+            
         {
             this.qtdeAnosEmpresa = qtdeAnosEmpresa;
         }

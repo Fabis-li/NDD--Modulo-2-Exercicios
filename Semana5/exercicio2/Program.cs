@@ -6,57 +6,51 @@ namespace exercicio2
     {
         static void Main(string[] args)
         {
-            Cartao va = new ValeAlimentacao();
-            va.bandeira = "Visa";
-            va.saldo = 1000;
-            va.valorTaxa = 0.02;
+            Cartao objetoCartao = new Cartao("visa", 1000.00, 0.02);
             
+            //Upcasting
+            Cartao objetoCartaoVA = new ValeAlimentacao("va", 400.00, 0.05);
+            Cartao objetoCartaoVR = new ValeRefeicao("vr", 500.00, 0.07);
+            Cartao objetoCartaoVT = new ValeTransporte ("vt", 400.00, 0.01);
 
-            Console.WriteLine($"O cartão de bandeira {va.bandeira}, com saldo inicial de R$ {va.saldo}, com taxa de {va.valorTaxa}");
-            va.VerificarValorTaxaCartao(1000);
-
-            Cartao vr = new ValeRefeicao();
-            vr.bandeira = "Teste";
-            vr.saldo = 300;
-            vr.valorTaxa = 0.02;
-
-             Console.WriteLine($"O cartão de bandeira {vr.bandeira}, com saldo inicial de R$ {vr.saldo}, com taxa de {vr.valorTaxa}");
-             vr.VerificarValorTaxaCartao(1000);
-
-             Cartao vt = new ValeTransporte();
-             vt.bandeira = "master";
-             vt.saldo = 200;
-             vt.valorTaxa = 0.02;
-
-             Console.WriteLine($"O cartão de bandeira {vt.bandeira}, com saldo inicial de R$ {vt.saldo}, com taxa de {vt.valorTaxa}");
-             vt.VerificarValorTaxaCartao(1000);
-
-
-            ValeAlimentacao valeAlimentacao = new ValeAlimentacao();
-            Cartao cartaoVa = valeAlimentacao;
-            cartaoVa.VerificarValorTaxaCartao(1000);
-
-            ValeRefeicao valeRefeicao = new ValeRefeicao();
-            Cartao cartaoVr = valeRefeicao;
-            cartaoVr.VerificarValorTaxaCartao(1000);
-
-            ValeTransporte valeTransporte = new ValeTransporte();
-            Cartao cartaoVt = valeTransporte;
-            cartaoVt.VerificarValorTaxaCartao(1000);
-
-
-            ValeAlimentacao vaDownCasting = (ValeAlimentacao)cartaoVa;
-            vaDownCasting.VerificarValorTaxaCartao(100);
-
-            ValeRefeicao vrDownCasting = (ValeRefeicao)cartaoVr;
-            vrDownCasting.VerificarValorTaxaCartao(100);
-
-            ValeTransporte vtDownCasting = (ValeTransporte)cartaoVt;
-            vtDownCasting.VerificarValorTaxaCartao(100);
-
-
+            //Objeto Cartao
+            Console.WriteLine($"Cartão - Bandeira: {objetoCartao.bandeira}");
+            Console.WriteLine($"Cartão - Saldo: {objetoCartao.saldo}");
+            Console.WriteLine($"Cartão - Valor da Taxa: {objetoCartao.valorTaxa}");
+            Console.WriteLine($"Cartão - Valor referente a taxa: {objetoCartao.VerificarValorTaxaCartao(objetoCartao.saldo)}");
             
+            //Objeto ValeAlimentação
+            Console.WriteLine($"Vale Alimentação - Bandeira: {objetoCartaoVA.bandeira}");
+            Console.WriteLine($"Vale Alimentação - Saldo: {objetoCartaoVA.saldo}");
+            Console.WriteLine($"Vale Alimentação - Valor da Taxa: {objetoCartaoVA.valorTaxa}");
+            Console.WriteLine($"Vale Alimentação - Valor referente a taxa: {objetoCartaoVA.VerificarValorTaxaCartao(objetoCartaoVA.saldo)}");
 
+
+            //Obejto ValeRefeição
+            Console.WriteLine($"Vale Refeição - Bandeira: {objetoCartaoVR.bandeira}");
+            Console.WriteLine($"Vale Refeição - Saldo: {objetoCartaoVR.saldo}");
+            Console.WriteLine($"Vale Refeição - Valor da Taxa: {objetoCartaoVR.valorTaxa}");
+            Console.WriteLine($"Vale Refeição - Valor referente a taxa: {objetoCartaoVR.VerificarValorTaxaCartao(objetoCartaoVR.saldo)}");
+
+
+            //Objeto ValeTransporte
+            Console.WriteLine($"Vale Transporte - Bandeira: {objetoCartaoVT.bandeira}");
+            Console.WriteLine($"Vale Transporte - Saldo: {objetoCartaoVT.saldo}");
+            Console.WriteLine($"Vale Transporte - Valor da Taxa: {objetoCartaoVT.valorTaxa}");
+            Console.WriteLine($"Vale Transporte - Valor referente a taxa: {objetoCartaoVT.VerificarValorTaxaCartao(objetoCartaoVT.saldo)}");
+
+
+            // Downcasting
+            ValeAlimentacao objetoCartaoVADowncasting = new ValeAlimentacao();
+            objetoCartaoVADowncasting = (ValeAlimentacao)objetoCartaoVA;
+
+            ValeRefeicao objetoCartaoVRDowncasting = new ValeRefeicao();
+            objetoCartaoVRDowncasting = (ValeRefeicao)objetoCartaoVR;
+
+            ValeTransporte objetoCartaoVTDowncasting = new ValeTransporte();
+            objetoCartaoVTDowncasting = (ValeTransporte)objetoCartaoVT;
         }
+
+
     }
 }

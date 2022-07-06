@@ -5,10 +5,14 @@ namespace exercicio2
         public ValeRefeicao()
         {            
         }
-         public override void VerificarValorTaxaCartao(double valorDaTaxa)
-        {
-           Console.WriteLine("O valor da taxa e saldo disponibilizado é " + valorDaTaxa * 0.08);
 
+        public ValeRefeicao(string bandeira, double saldo, double valorTaxa) : base(bandeira, saldo, valorTaxa)
+        {
+            
+        }
+         public override double VerificarValorTaxaCartao(double valorDaTaxa)
+        {
+           return saldo * 0.07;
         }
     }
 }
