@@ -7,8 +7,22 @@ namespace modulo2_semana6_api.Controllers;
 public class ExercicioSomaController : ControllerBase
 {
     [HttpGet("{valorA}/{valorB}")]
-    public string Get(int valorA, int ValorB)
+    public string Get(int valorA, int valorB)
     {
-        return"";
+        try
+        {
+            int soma = valorA + valorB;
+            if (soma < 10)
+            {
+                return $"{soma}";
+            }
+            Random numero = new Random();
+            return $"{numero.Next(10, 9999)}";
+        }
+        catch (Exception ex)
+        {
+            
+            throw new Exception("Erro ao somar.", ex);
+        }
     }
 }
